@@ -1,0 +1,11 @@
+replicaCount: 1
+
+image:
+  repository: "pinkmelon/portal-service"
+  tag: "2"
+
+service:
+  type: LoadBalancer
+  port: 8089
+
+revisionHistoryLimit: 3

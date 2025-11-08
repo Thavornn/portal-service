@@ -1,0 +1,47 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: portal-service
+  namespace: hrd-portal
+  labels:
+    app: portal-service
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: portal-service
+  template:
+    metadata:
+      labels:
+        app: portal-service
+    spec:
+      containers:
+        - name: portal-service-container
+          image: pinkmelon/portal-service:2
+          ports:
+            - containerPort: 8089
+          env:
+            # Database
+            - name: SPRING_DATASOURCE_URL
+              value: "jdbc:postgresql://128.199.251.237:5439/service_db"
+            - name: SPRING_DATASOURCE_USERNAME
+              value: "service_db"
+            - name: SPRING_DATASOURCE_PASSWORD
+              value: "KBhCIA69hfLI2YR5te"
+
+            # Keycloak JWT decoder
+            - name: SPRING_SECURITY_OAUTH2_RESOURCESERVER_JWT_ISSUER_URI
+              value: "https://keycloak.hrdportal.systems/realms/hrd-portal"
+
+            # Optional Keycloak credentials if your app uses client credentials
+            - name: KEYCLOAK_CLIENT_ID
+              value: "oauth-admin-client"
+            - name: KEYCLOAK_CLIENT_SECRET
+              value: "DL0k4XJKOloyUcYepUd6PPr5jgu77YKC"
+            - name: KEYCLOAK_SERVER_URL
+              value: "https://keycloak.hrdportal.systems"
+            - name: KEYCLOAK_REALM
+              value: "hrd-portal"
+
+            - name: SPRING_PROFILES_ACTIVE
+              value: "prod"
