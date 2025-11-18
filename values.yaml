@@ -2,7 +2,7 @@ replicaCount: 1
 
 image:
   repository: "pinkmelon/portal-service"
-  tag: 13
+  tag: 14
 
 service:
   type: LoadBalancer
