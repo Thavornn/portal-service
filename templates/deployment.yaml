@@ -23,7 +23,7 @@ spec:
             - containerPort: {{ .Values.service.port }}
           env:
             - name: SPRING_DATASOURCE_URL
-              value: "jdbc:postgresql://128.199.251.237:5439/service_db"
+              value: "jdbc:postgresql://96.9.81.188:5439/service_db"
             - name: SPRING_DATASOURCE_USERNAME
               value: "service_db"
             - name: SPRING_DATASOURCE_PASSWORD
