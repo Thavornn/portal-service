@@ -23,13 +23,15 @@ spec:
             - containerPort: {{ .Values.service.port }}
           env:
             - name: SPRING_DATASOURCE_URL
-              value: "jdbc:postgresql://96.9.81.188:5439/service_db"
+              value: "jdbc:postgresql://146.190.105.198:5439/service_db"
             - name: SPRING_DATASOURCE_USERNAME
               value: "service_db"
             - name: SPRING_DATASOURCE_PASSWORD
               value: "KBhCIA69hfLI2YR5te"
             - name: SPRING_SECURITY_OAUTH2_RESOURCESERVER_JWT_ISSUER_URI
-              value: "https://keycloak.hrdportal.systems/realms/hrd-portal"
+              value: "https://keycloak-new.hrdportal.systems/realms/hrd-portal"
+
+              KEYCLOAK_SERVER_URL: "https://keycloak-new.hrdportal.systems"
             - name: KEYCLOAK_CLIENT_ID
               value: "oauth-admin-client"
             - name: KEYCLOAK_CLIENT_SECRET
