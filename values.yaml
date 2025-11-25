@@ -2,7 +2,7 @@ replicaCount: 1
 
 image:
   repository: "pinkmelon/portal-service"
-  tag: 23
+  tag: 25
 
 service:
   type: NodePort
