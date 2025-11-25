@@ -30,8 +30,6 @@ spec:
               value: "KBhCIA69hfLI2YR5te"
             - name: SPRING_SECURITY_OAUTH2_RESOURCESERVER_JWT_ISSUER_URI
               value: "https://keycloak-new.hrdportal.systems/realms/hrd-portal"
-
-              KEYCLOAK_SERVER_URL: "https://keycloak-new.hrdportal.systems"
             - name: KEYCLOAK_CLIENT_ID
               value: "oauth-admin-client"
             - name: KEYCLOAK_CLIENT_SECRET
