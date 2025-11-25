@@ -33,9 +33,9 @@ spec:
             - name: KEYCLOAK_CLIENT_ID
               value: "oauth-admin-client"
             - name: KEYCLOAK_CLIENT_SECRET
-              value: "DL0k4XJKOloyUcYepUd6PPr5jgu77YKC"
+              value: "wG46AevzR5OPs3HFdvE7WTjtFNUMvmsX"
             - name: KEYCLOAK_SERVER_URL
-              value: "https://keycloak.hrdportal.systems"
+              value: "https://keycloak-new.hrdportal.systems"
             - name: KEYCLOAK_REALM
               value: "hrd-portal"
             - name: SPRING_PROFILES_ACTIVE
